@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hF7W2qUl6rEdPpImzZNavzO3V58PLXnQSrKXKDCVKecCNwx5DzSbR/BdvJho3mPagdggNtTmzdlQtmiol58x/w==",
+  "dgSpecHash": "ut/GAIatZn59gMpgmYBNb8UOFq8780QZ5JVjOzf8girt5xw/qgir6wlI3Csy2ko8dFxzqUPqLpAr9vy74Y5q/w==",
   "success": true,
-  "projectFilePath": "/home/jdnixx/C#/aoc/day-01/day-01.csproj",
+  "projectFilePath": "/home/jdnixx/aoc-2023/C#/day-01/day-01.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

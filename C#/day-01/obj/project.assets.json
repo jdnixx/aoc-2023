@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jdnixx/C#/aoc/day-01/day-01.csproj",
+      "projectUniqueName": "/home/jdnixx/aoc-2023/C#/day-01/day-01.csproj",
       "projectName": "day-01",
-      "projectPath": "/home/jdnixx/C#/aoc/day-01/day-01.csproj",
+      "projectPath": "/home/jdnixx/aoc-2023/C#/day-01/day-01.csproj",
       "packagesPath": "/home/jdnixx/.nuget/packages/",
-      "outputPath": "/home/jdnixx/C#/aoc/day-01/obj/",
+      "outputPath": "/home/jdnixx/aoc-2023/C#/day-01/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jdnixx/.nuget/NuGet/NuGet.Config"

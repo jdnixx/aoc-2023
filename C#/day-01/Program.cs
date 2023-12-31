@@ -16,7 +16,8 @@ string path = "./input.txt";
 //     }
 // }
 
-var linez = File.ReadAllLines(path);
+var lines = File.ReadAllLines(path);
+// string[] lines = {"two1nine", "eightwothree", "abcone2threexyz", "xtwone3four", "4nineeightseven2", "zoneight234", "7pqrstsixteen"};
 
 // foreach(var line in lines){
 //     line = string.Join(null, System.Text.RegularExpressions.Regex.Split(line, "[A-Za-z]"));
@@ -24,36 +25,28 @@ var linez = File.ReadAllLines(path);
 
 int sum = 0;
 
-string[] lines = {"two1nine", "eightwothree", "abcone2threexyz", "xtwone3four", "4nineeightseven2", "zoneight234", "7pqrstsixteen"};
-
 for (int i = 0; i<lines.Length; i++){
     Console.WriteLine(lines[i]);
     // replace all spelled-out numbers
+    // NOTE: have to leave leading & trailing character,
+    // or else subsequent replacements may miss adjacent number-words (like "eightwo")
     lines[i] = lines[i]
-    .Replace("one", "1")
-    .Replace("two", "2")
-    .Replace("three", "3")
-    .Replace("four", "4")
-    .Replace("five", "5")
-    .Replace("six", "6")
-    .Replace("seven", "7")
-    .Replace("eight", "8")
-    .Replace("nine", "9");
+    .Replace("one", "o1e")
+    .Replace("two", "t2o")
+    .Replace("three", "t3e")
+    .Replace("four", "f4r")
+    .Replace("five", "f5e")
+    .Replace("six", "s6x")
+    .Replace("seven", "s7n")
+    .Replace("eight", "e8t")
+    .Replace("nine", "n9e");
     Console.WriteLine(lines[i]);
 
+    int firstNumber = lines[i].First(c => char.IsDigit(c)) - '0';
+    int lastNumber = lines[i].Last(c => char.IsDigit(c)) - '0';
+    int entireNumber = firstNumber*10 + lastNumber;
+    Console.WriteLine(entireNumber);
+    sum += entireNumber;
 
-    // strip all letters
-    lines[i] = string.Join(null, System.Text.RegularExpressions.Regex.Split(lines[i], "[A-Za-z]"));
-    // case where there is only 1 number
-    if (lines[i].Length == 1) {
-        lines[i] = string.Concat(Enumerable.Repeat(lines[i], 2));
-    }
-
-    string firstNumber = lines[i].Substring(0, 1);
-    string lastNumber = lines[i].Substring(lines[i].Length - 1, 1);
-    lines[i] = firstNumber + lastNumber;
-    sum += int.Parse(lines[i]);
-
-    Console.WriteLine(lines[i]);
     Console.WriteLine(sum);
 }
